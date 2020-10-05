@@ -5,7 +5,6 @@ import android.os.Bundle
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
-
     @Inject
     lateinit var car: Car
     @Inject
