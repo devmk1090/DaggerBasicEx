@@ -3,13 +3,15 @@ package com.devkproject.daggereasyex
 import javax.inject.Inject
 
 class Car {
+    @Inject
     lateinit  var wheels: Wheels
     lateinit var engine: Engine
+    lateinit var driver: Driver
 
     @Inject
-    constructor(wheels: Wheels, engine: Engine) {
-        this.wheels = wheels
+    constructor(engine: Engine, driver: Driver) {
         this.engine = engine
+        this.driver = driver
     }
 
     @Inject
@@ -18,7 +20,9 @@ class Car {
     }
 
     fun start() {
-        engine.start()
-        println("driving...")
+        println("Driver: $driver")
+//        println("wheels: $wheels")
+//        engine.start()
+//        println("driving...")
     }
 }
